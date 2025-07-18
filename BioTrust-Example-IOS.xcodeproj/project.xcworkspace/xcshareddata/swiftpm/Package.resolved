@@ -1,0 +1,15 @@
+{
+  "originHash" : "b908a00be59cfd6ed3e36057f35e552f2b2df39dd9c87aaf3bba6085fd3c3b93",
+  "pins" : [
+    {
+      "identity" : "biotrust-sdk-ios-release",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/biotrust-br/BioTrust-SDK-IOS-Release",
+      "state" : {
+        "branch" : "main",
+        "revision" : "4e97b43b5f7ce6f918350291cc8fb5305d8fc229"
+      }
+    }
+  ],
+  "version" : 3
+}

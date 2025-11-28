@@ -1,13 +1,22 @@
 {
-  "originHash" : "b908a00be59cfd6ed3e36057f35e552f2b2df39dd9c87aaf3bba6085fd3c3b93",
+  "originHash" : "5ab51f7783ee8bdd2007e2217d49276269bb49a9bdc7bfd254386753792bae03",
   "pins" : [
     {
       "identity" : "biotrust-sdk-ios-release",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/biotrust-br/BioTrust-SDK-IOS-Release",
+      "location" : "https://github.com/biotrust-io/BioTrust-SDK-IOS-Release",
       "state" : {
         "branch" : "main",
-        "revision" : "4e97b43b5f7ce6f918350291cc8fb5305d8fc229"
+        "revision" : "76d23cf4193f3372cde0122a1ecd5ef5bc379544"
+      }
+    },
+    {
+      "identity" : "fingerprintjs-pro-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/fingerprintjs/fingerprintjs-pro-ios",
+      "state" : {
+        "revision" : "881f81d5869e0a236595f5c73d64a6f101bd4a49",
+        "version" : "2.11.0"
       }
     }
   ],

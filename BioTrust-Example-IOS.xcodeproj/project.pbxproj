@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0BBA17752E2AF41700A765B8 /* BioTrust in Frameworks */ = {isa = PBXBuildFile; productRef = 0BBA17742E2AF41700A765B8 /* BioTrust */; };
+		0B1655E22EDA435300359365 /* BioTrust in Frameworks */ = {isa = PBXBuildFile; productRef = 0B1655E12EDA435300359365 /* BioTrust */; };
+		0B87CD3C2ECD39A600EC9F77 /* FingerprintPro in Frameworks */ = {isa = PBXBuildFile; productRef = 0B87CD3B2ECD39A600EC9F77 /* FingerprintPro */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +28,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BBA17752E2AF41700A765B8 /* BioTrust in Frameworks */,
+				0B1655E22EDA435300359365 /* BioTrust in Frameworks */,
+				0B87CD3C2ECD39A600EC9F77 /* FingerprintPro in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +72,8 @@
 			);
 			name = "BioTrust-Example-IOS";
 			packageProductDependencies = (
-				0BBA17742E2AF41700A765B8 /* BioTrust */,
+				0B87CD3B2ECD39A600EC9F77 /* FingerprintPro */,
+				0B1655E12EDA435300359365 /* BioTrust */,
 			);
 			productName = "BioTrust-Example-IOS";
 			productReference = 0BBA17182E29820700A765B8 /* BioTrust-Example-IOS.app */;
@@ -101,7 +104,8 @@
 			mainGroup = 0BBA170F2E29820700A765B8;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				0BBA17732E2AF41700A765B8 /* XCRemoteSwiftPackageReference "BioTrust-SDK-IOS-Release" */,
+				0B87CD3A2ECD39A600EC9F77 /* XCRemoteSwiftPackageReference "fingerprintjs-pro-ios" */,
+				0B1655E02EDA435300359365 /* XCRemoteSwiftPackageReference "BioTrust-SDK-IOS-Release" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 0BBA17192E29820700A765B8 /* Products */;
@@ -337,21 +341,34 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		0BBA17732E2AF41700A765B8 /* XCRemoteSwiftPackageReference "BioTrust-SDK-IOS-Release" */ = {
+		0B1655E02EDA435300359365 /* XCRemoteSwiftPackageReference "BioTrust-SDK-IOS-Release" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/biotrust-br/BioTrust-SDK-IOS-Release";
+			repositoryURL = "https://github.com/biotrust-io/BioTrust-SDK-IOS-Release";
 			requirement = {
 				branch = main;
 				kind = branch;
 			};
 		};
+		0B87CD3A2ECD39A600EC9F77 /* XCRemoteSwiftPackageReference "fingerprintjs-pro-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/fingerprintjs/fingerprintjs-pro-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.11.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0BBA17742E2AF41700A765B8 /* BioTrust */ = {
+		0B1655E12EDA435300359365 /* BioTrust */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0BBA17732E2AF41700A765B8 /* XCRemoteSwiftPackageReference "BioTrust-SDK-IOS-Release" */;
+			package = 0B1655E02EDA435300359365 /* XCRemoteSwiftPackageReference "BioTrust-SDK-IOS-Release" */;
 			productName = BioTrust;
+		};
+		0B87CD3B2ECD39A600EC9F77 /* FingerprintPro */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0B87CD3A2ECD39A600EC9F77 /* XCRemoteSwiftPackageReference "fingerprintjs-pro-ios" */;
+			productName = FingerprintPro;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

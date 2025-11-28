@@ -33,17 +33,40 @@ struct ContentView: View {
                         }
                 )
                 .padding(10)
+            
+            Button("FaceMatch", action:{})
+                .simultaneousGesture(
+                    TapGesture()
+                        .onEnded {
+                            if let topVC = getRootViewController() {
+                                startValidation(from: topVC, validationMode: .faceMatch(requireChallenges: false))
+                            }
+                        }
+                )
+                .padding(10)
+            
+            
+            Button("FaceMatch Exact", action:{})
+                .simultaneousGesture(
+                    TapGesture()
+                        .onEnded {
+                            if let topVC = getRootViewController() {
+                                startValidation(from: topVC, validationMode: .faceMatchExact(documentNumber: "00000000000", requireChallenges: false))
+                            }
+                        }
+                )
+                .padding(10)
         }
         .padding()
     }
     
     private func startValidation(from viewController: UIViewController, validationMode: ValidationMode) {
         let builder = FaceBiometricConfig.Builder()
-            .setUuid("INSIRA SEU UUID FORNECIDO PELO BIOTRUST")
-            .setApiUrl("https://api.biotrust.com.br")
+            .setUuid("INSISRA SEU UUID AQUI")
+            .setApiUrl("https://api.biotrust.io")
             .setChallengeCount(3)
             .setValidationMode(validationMode)
-            .setLocale("pt-BR")
+            .setLocale("en-US")
 
         if(validationMode == .livenessWithDocument){
         
@@ -57,6 +80,7 @@ struct ContentView: View {
             }
             
         }
+        
 
         do {
             let config = try builder.build()
@@ -94,6 +118,24 @@ private func getRootViewController() -> UIViewController? {
 
 class DemoValidationCallback: BiometricValidationLauncher.ValidationResultCallback {
     
+    
+    func onFaceMatchComplete(result : ValidationResult){
+        print("==FaceMatchComplete==")
+        
+        print("isSuccess: \(result.getIsSuccess())")
+        print("Message: \(result.getMessage())")
+        print("Match: \(result.getMatch() ?? false)")
+        print("Match Confidence: \(String(describing: result.getMatchConfidence()))")
+        print("Liveness Confidence: \(result.getLivenessConfidence())")
+        print("Image size: \(result.getFaceImage()?.size ?? CGSize.zero)")
+        
+        print("Person ID: \(String(describing: result.getMatchedPersonId()))")
+        print("Person Document: \(String(describing: result.getPersonDocument()))")
+        print("Person Name: \(String(describing: result.getPersonName()))")
+        
+        
+        
+    }
     
     func onValidationSuccess(message: String, livenessConfidence: Float, faceImage: UIImage?) {
         

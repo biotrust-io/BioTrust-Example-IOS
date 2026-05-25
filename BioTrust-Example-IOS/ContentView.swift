@@ -62,7 +62,7 @@ struct ContentView: View {
     
     private func startValidation(from viewController: UIViewController, validationMode: ValidationMode) {
         let builder = FaceBiometricConfig.Builder()
-            .setUuid("INSISRA SEU UUID AQUI")
+            .setUuid("INSIRA SEU UUID AQUI")
             .setApiUrl("https://api.biotrust.io")
             .setChallengeCount(3)
             .setValidationMode(validationMode)
@@ -143,6 +143,7 @@ class DemoValidationCallback: BiometricValidationLauncher.ValidationResultCallba
         print("Message: \(message)")
         print("Liveness confidence: \(livenessConfidence)")
         print("Image size: \(faceImage?.size ?? CGSize.zero)")
+        
         
     }
     

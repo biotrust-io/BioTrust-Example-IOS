@@ -30,8 +30,8 @@
             filePath = "BioTrust-Example-IOS/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "onDocumentValidationComplete(result:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "BioTrust-Example-IOS/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
             landmarkName = "onValidationFailed(errorMessage:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,8 +62,8 @@
             filePath = "BioTrust-Example-IOS/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
             landmarkName = "onValidationError(errorMessage:)"
             landmarkType = "7">
          </BreakpointContent>

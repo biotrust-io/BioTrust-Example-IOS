@@ -1,5 +1,5 @@
 import SwiftUI
-import BiometricFaceValidator
+import BioTrust
 
 
 struct ContentView: View {
@@ -87,7 +87,7 @@ struct ContentView: View {
             let callback = DemoValidationCallback()
             self.currentCallback = callback
             
-            BiometricFaceValidatorFramework.initializeFramework()
+            BioTrustFramework.initializeFramework()
             
             let launcher = BiometricValidationLauncher(
                 viewController: viewController,
@@ -176,6 +176,10 @@ class DemoValidationCallback: BiometricValidationLauncher.ValidationResultCallba
         print("==onValidationError==")
         print("Failure message: \(errorMessage)")
         
+    }
+
+    func onValidationCancelled() {
+        print("Validação cancelada")
     }
 }
 

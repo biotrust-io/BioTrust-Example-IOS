@@ -1,1 +1,4 @@
 .DS_Store
+
+# Saída do xcodebuild com -derivedDataPath build
+build/
